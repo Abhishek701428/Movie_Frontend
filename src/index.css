@@ -1,0 +1,109 @@
+/* styles.css */
+
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
+
+.messages {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.messages div {
+  margin-bottom: 5px;
+  padding: 5px;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+button {
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex: 1 1 200px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive design for mobile screens */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  button {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .messages {
+    max-height: 200px;
+  }
+}
+
+/* Additional styles for larger screens */
+@media (min-width: 769px) {
+  .container {
+    padding: 20px;
+  }
+
+  form {
+    flex-direction: row;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  button {
+    margin-right: 10px;
+    width: auto;
+  }
+}
