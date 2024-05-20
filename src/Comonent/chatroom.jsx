@@ -25,7 +25,7 @@ const ChatRoom = ({ username }) => {
     // Fetch messages from server
     const fetchMessages = async () => {
         try {
-            const response = await axios.get('http://localhost:8000/chat/messages');
+            const response = await axios.get('https://comp-assigment-nodejs.onrender.com/chat/messages');
             setMessages(response.data);
         } catch (err) {
             console.error('Error fetching messages:', err);
@@ -37,7 +37,7 @@ const ChatRoom = ({ username }) => {
         e.preventDefault();
         if (newMessage.trim() === '') return;
         try {
-            const response = await axios.post('http://localhost:8000/chat/messages', { username, text: newMessage });
+            const response = await axios.post('https://comp-assigment-nodejs.onrender.com/chat/messages', { username, text: newMessage });
             const newMessageData = response.data.data;
             setMessages((prevMessages) => [...prevMessages, newMessageData]);
             setNewMessage('');

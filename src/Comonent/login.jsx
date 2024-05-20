@@ -12,12 +12,12 @@ const Login = ({ onLogin }) => {
         e.preventDefault();
         try {
             if (isRegistering) {
-                const response = await axios.post('http://localhost:8000/user/register', { email, username, password });
+                const response = await axios.post('https://comp-assigment-nodejs.onrender.com/user/register', { email, username, password });
                 const { token } = response.data;
                 localStorage.setItem('token', token);
                 localStorage.setItem('username', username);
             } else {
-                const response = await axios.post('http://localhost:8000/user/login', { username, password });
+                const response = await axios.post('https://comp-assigment-nodejs.onrender.com/user/login', { username, password });
                 const { token } = response.data;
                 localStorage.setItem('token', token);
                 localStorage.setItem('username', username);
